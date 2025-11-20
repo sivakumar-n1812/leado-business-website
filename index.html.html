@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Leado Business Solutions - Your Digital Growth Partner</title>
+  <meta name="description" content="Leado Business Solutions - Empowering your brand to thrive in the digital world with innovative marketing strategies in Coimbatore, India">
+  <meta name="keywords" content="digital marketing, social media, google ads, video editing, website development, coimbatore">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary-color: #D4AF37;
+      --secondary-color: #1a1a1a;
+      --accent-color: #00ff88;
+      --text-light: #ffffff;
+      --text-dark: #333333;
+      --background-dark: #000000;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      color: var(--text-dark);
+      line-height: 1.6;
+      padding-top: 80px;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+    }
+
+    /* Header */
+    .header {
+      background: var(--background-dark);
+      padding: 15px 0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .logo img {
+      height: 50px;
+      margin-right: 10px;
+    }
+
+    .logo h1 {
+      color: var(--primary-color);
+      font-size: 24px;
+      margin: 0;
+    }
+
+    .navmenu ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navmenu a {
+      color: var(--text-light);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+      font-size: 15px;
+    }
+
+    .navmenu a:hover,
+    .navmenu a.active {
+      color: var(--primary-color);
+    }
+
+    .btn-getstarted {
+      background: var(--primary-color);
+      color: var(--background-dark);
+      padding: 10px 25px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+
+    .btn-getstarted:hover {
+      background: #c5a028;
+      transform: translateY(-2px);
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+      padding: 180px 0 120px;
+      color: var(--text-light);
+      position: relative;
+      overflow: hidden;
+      min-height: 600px;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="%23D4AF37" opacity="0.1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
+      opacity: 0.3;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+      color: var(--text-light);
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero h1 span {
+      color: var(--primary-color);
+      display: block;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 30px;
+      color: #e0e0e0;
+      position: relative;
+      z-index: 2;
+      line-height: 1.8;
+    }
+
+    .hero-img img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 10px 40px rgba(212, 175, 55, 0.3);
+    }
+
+    .btn-get-started {
+      background: var(--primary-color);
+      color: var(--background-dark);
+      padding: 15px 35px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-block;
+      transition: all 0.3s;
+    }
+
+    .btn-get-started:hover {
+      background: #c5a028;
+      transform: translateY(-3px);
+      box-shadow: 0 5px 20px rgba(212, 175, 55, 0.4);
+    }
+
+    /* Sections */
+    .section {
+      padding: 80px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title h2 {
+      font-size: 36px;
+      color: var(--secondary-color);
+      margin-bottom: 15px;
+      position: relative;
+      display: inline-block;
+    }
+
+    .section-title h2::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 3px;
+      background: var(--primary-color);
+    }
+
+    .section-title p {
+      color: #666;
+      font-size: 16px;
+    }
+
+    .light-background {
+      background: #f8f9fa;
+    }
+
+    /* Services */
+    .service-item {
+      background: white;
+      padding: 40px 30px;
+      border-radius: 10px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+      transition: all 0.3s;
+      height: 100%;
+      border-top: 3px solid var(--primary-color);
+    }
+
+    .service-item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
+    }
+
+    .service-item .icon {
+      font-size: 48px;
+      color: var(--primary-color);
+      margin-bottom: 20px;
+    }
+
+    .service-item h4 {
+      font-size: 20px;
+      margin-bottom: 15px;
+      color: var(--secondary-color);
+    }
+
+    .service-item p {
+      color: #666;
+      font-size: 15px;
+    }
+
+    /* Contact */
+    .contact {
+      background: white;
+    }
+
+    .info-item {
+      background: #f8f9fa;
+      padding: 30px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      border-left: 4px solid var(--primary-color);
+    }
+
+    .info-item i {
+      font-size: 32px;
+      color: var(--primary-color);
+      margin-right: 15px;
+    }
+
+    .info-item h3 {
+      font-size: 18px;
+      margin-bottom: 5px;
+      color: var(--secondary-color);
+    }
+
+    .info-item p {
+      margin: 0;
+      color: #666;
+    }
+
+    .php-email-form {
+      background: #f8f9fa;
+      padding: 40px;
+      border-radius: 10px;
+    }
+
+    .php-email-form input,
+    .php-email-form textarea {
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 12px;
+      width: 100%;
+      margin-bottom: 20px;
+      transition: border 0.3s;
+    }
+
+    .php-email-form input:focus,
+    .php-email-form textarea:focus {
+      border-color: var(--primary-color);
+      outline: none;
+    }
+
+    .php-email-form button {
+      background: var(--primary-color);
+      color: var(--background-dark);
+      border: none;
+      padding: 15px 40px;
+      border-radius: 50px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .php-email-form button:hover {
+      background: #c5a028;
+      transform: translateY(-2px);
+    }
+
+    .php-email-form .success-message,
+    .php-email-form .error-message {
+      display: none;
+      padding: 15px;
+      margin-top: 20px;
+      border-radius: 5px;
+    }
+
+    .php-email-form .success-message {
+      background: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+    }
+
+    .php-email-form .error-message {
+      background: #f8d7da;
+      color: #721c24;
+      border: 1px solid #f5c6cb;
+    }
+
+    /* Portfolio & Courses - Coming Soon */
+    .coming-soon {
+      background: linear-gradient(135deg, var(--secondary-color) 0%, #000000 100%);
+      padding: 150px 0;
+      text-align: center;
+      color: var(--text-light);
+    }
+
+    .coming-soon h2 {
+      font-size: 48px;
+      margin-bottom: 20px;
+      color: var(--primary-color);
+    }
+
+    .coming-soon p {
+      font-size: 20px;
+      color: #cccccc;
+    }
+
+    /* Footer */
+    .footer {
+      background: var(--background-dark);
+      color: var(--text-light);
+      padding: 60px 0 30px;
+    }
+
+    .footer h4 {
+      color: var(--primary-color);
+      margin-bottom: 20px;
+    }
+
+    .footer-links ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-links a {
+      color: #cccccc;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer-links a:hover {
+      color: var(--primary-color);
+    }
+
+    .social-links {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .social-links a {
+      width: 40px;
+      height: 40px;
+      background: rgba(212, 175, 55, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary-color);
+      transition: all 0.3s;
+    }
+
+    .social-links a:hover {
+      background: var(--primary-color);
+      color: var(--background-dark);
+    }
+
+    .copyright {
+      text-align: center;
+      padding-top: 30px;
+      margin-top: 30px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      color: #999;
+    }
+
+    /* Scroll Top */
+    .scroll-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 45px;
+      height: 45px;
+      background: var(--primary-color);
+      color: var(--background-dark);
+      border-radius: 50%;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      cursor: pointer;
+      transition: all 0.3s;
+      z-index: 999;
+    }
+
+    .scroll-top:hover {
+      transform: translateY(-5px);
+    }
+
+    .scroll-top.active {
+      display: flex;
+    }
+
+    /* Mobile Nav Toggle */
+    .mobile-nav-toggle {
+      display: none;
+      color: var(--text-light);
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+    /* Responsive */
+    @media (max-width: 991px) {
+      .mobile-nav-toggle {
+        display: block;
+      }
+
+      .navmenu {
+        position: fixed;
+        top: 80px;
+        right: -100%;
+        width: 100%;
+        max-width: 300px;
+        background: var(--background-dark);
+        padding: 30px;
+        transition: right 0.3s;
+        box-shadow: -5px 0 20px rgba(0,0,0,0.3);
+      }
+
+      .navmenu.active {
+        right: 0;
+      }
+
+      .navmenu ul {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .section-title h2 {
+        font-size: 28px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        padding: 120px 0 80px;
+      }
+
+      .hero h1 {
+        font-size: 28px;
+      }
+
+      .section {
+        padding: 60px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="#hero" class="logo d-flex align-items-center">
+        <img src="Logo.jpg" alt="Leado Business Solutions">
+        <h1>LEADO</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#courses">Courses</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <a class="btn-getstarted" href="#contact">Get Started</a>
+      <i class="mobile-nav-toggle bi bi-list"></i>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section">
+      <div class="container">
+        <div class="row gy-4 align-items-center">
+          <div class="col-lg-6 order-2 order-lg-1" data-aos="fade-up">
+            <h1>Leado Business Solutions <span>Your Trusted Digital Growth Partner</span></h1>
+            <p>At Leado Business Solutions, we empower your brand to thrive in the digital world. Our innovative strategies and tailored marketing solutions are designed to accelerate your business growth and maximize your online impact.</p>
+            <div class="d-flex gap-3">
+              <a href="#services" class="btn-get-started">Our Services</a>
+            </div>
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="fade-up" data-aos-delay="200">
+            <img src="Title Page.jpg" class="img-fluid animated" alt="Leado Business Solutions">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services section light-background">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Our Services</h2>
+        <p>Unlock the full potential of your digital presence with our comprehensive services</p>
+      </div>
+
+      <div class="container">
+        <div class="row gy-4">
+
+          <div class="col-xl-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item">
+              <div class="icon"><i class="bi bi-share"></i></div>
+              <h4>Social Media Marketing</h4>
+              <p>Build your brand and engage your audience across all major platforms with creative and data-driven social media campaigns.</p>
+            </div>
+          </div>
+
+          <div class="col-xl-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item">
+              <div class="icon"><i class="bi bi-google"></i></div>
+              <h4>Google Ads Management</h4>
+              <p>Maximize your ROI with targeted Google Ads that reach the right customers at the right time.</p>
+            </div>
+          </div>
+
+          <div class="col-xl-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item">
+              <div class="icon"><i class="bi bi-file-text"></i></div>
+              <h4>Script Writing, Content & Voice Overs</h4>
+              <p>Craft compelling stories and persuasive messages with professional scriptwriting, quality content, and crisp voice overs that resonate with your audience.</p>
+            </div>
+          </div>
+
+          <div class="col-xl-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item">
+              <div class="icon"><i class="bi bi-film"></i></div>
+              <h4>Video Editing</h4>
+              <p>Transform your raw content into captivating videos that grab attention and drive conversions.</p>
+            </div>
+          </div>
+
+          <div class="col-xl-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="500">
+            <div class="service-item">
+              <div class="icon"><i class="bi bi-gear"></i></div>
+              <h4>Campaign Automation</h4>
+              <p>Automate your marketing campaigns for consistent engagement and measurable results.</p>
+            </div>
+          </div>
+
+          <div class="col-xl-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="600">
+            <div class="service-item">
+              <div class="icon"><i class="bi bi-code-square"></i></div>
+              <h4>Landing Pages & Website Development</h4>
+              <p>Create high-converting landing pages and fully optimized websites designed to convert visitors into customers.</p>
+            </div>
+          </div>
+
+          <div class="col-xl-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="700">
+            <div class="service-item">
+              <div class="icon"><i class="bi bi-camera-video"></i></div>
+              <h4>Video & Drone Shoots</h4>
+              <p>Capture stunning visuals with our professional video and drone shooting services that showcase your brand from every angle.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section coming-soon">
+      <div class="container" data-aos="fade-up">
+        <h2>Portfolio</h2>
+        <p>Coming Soon - Showcase of Our Amazing Work</p>
+        <div class="mt-4">
+          <i class="bi bi-hourglass-split" style="font-size: 64px; color: var(--primary-color);"></i>
+        </div>
+      </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="courses section coming-soon">
+      <div class="container" data-aos="fade-up">
+        <h2>Courses</h2>
+        <p>Coming Soon - Learn Digital Marketing from Experts</p>
+        <div class="mt-4">
+          <i class="bi bi-book" style="font-size: 64px; color: var(--primary-color);"></i>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact Us</h2>
+        <p>Connect | Explore | Grow - We're here to help you take your business to new heights</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4">
+
+          <div class="col-lg-5">
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+              <i class="bi bi-geo-alt flex-shrink-0"></i>
+              <div>
+                <h3>Address</h3>
+                <p>No 7 SS Garden, Coimbatore, Tamil Nadu, India</p>
+              </div>
+            </div>
+
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+              <i class="bi bi-telephone flex-shrink-0"></i>
+              <div>
+                <h3>Call Us</h3>
+                <p>+91 97904 70480<br>+91 80732 29047</p>
+              </div>
+            </div>
+
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+              <i class="bi bi-envelope flex-shrink-0"></i>
+              <div>
+                <h3>Email Us</h3>
+                <p>info@leadobusinesssolutions.com</p>
+              </div>
+            </div>
+
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="500">
+              <i class="bi bi-globe flex-shrink-0"></i>
+              <div>
+                <h3>Website</h3>
+                <p>www.leadobusinesssolutions.com</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <form class="php-email-form" data-aos="fade-up" data-aos-delay="200" onsubmit="handleSubmit(event)">
+              <div class="row gy-4">
+                <div class="col-md-12">
+                  <label for="name-field" class="pb-2">Full Name *</label>
+                  <input type="text" name="name" id="name-field" class="form-control" required>
+                </div>
+
+                <div class="col-md-12">
+                  <label for="email-field" class="pb-2">Email Address *</label>
+                  <input type="email" class="form-control" name="email" id="email-field" required>
+                </div>
+
+                <div class="col-md-12">
+                  <label for="phone-field" class="pb-2">Phone Number *</label>
+                  <input type="tel" class="form-control" name="phone" id="phone-field" required>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <button type="submit">Submit</button>
+                </div>
+
+                <div class="success-message">Your message has been sent. Thank you!</div>
+                <div class="error-message">Please fill all required fields correctly.</div>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="footer" class="footer">
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="#hero" class="d-flex align-items-center mb-3">
+            <span style="color: var(--primary-color); font-size: 24px; font-weight: 700;">LEADO</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>No 7 SS Garden</p>
+            <p>Coimbatore, Tamil Nadu, India</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+91 97904 70480</span></p>
+            <p><strong>Email:</strong> <span>info@leadobusinesssolutions.com</span></p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-3 footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="#hero">Home</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#services">Services</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#portfolio">Portfolio</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#courses">Courses</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-3 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="#services">Social Media Marketing</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#services">Google Ads</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#services">Video Editing</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#services">Website Development</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-12">
+          <h4>Follow Us</h4>
+          <p>Connect with us on social media</p>
+          <div class="social-links d-flex">
+            <a href="#"><i class="bi bi-twitter-x"></i></a>
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1" style="color: var(--primary-color);">Leado Business Solutions</strong> <span>All Rights Reserved</span></p>
+    </div>
+  </footer>
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: true,
+      mirror: false
+    });
+
+    // Mobile Navigation Toggle
+    const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+    const navMenu = document.querySelector('.navmenu');
+
+    if (mobileNavToggle) {
+      mobileNavToggle.addEventListener('click', function() {
+        navMenu.classList.toggle('active');
+        this.classList.toggle('bi-list');
+        this.classList.toggle('bi-x');
+      });
+    }
+
+    // Close mobile menu when clicking a link
+    document.querySelectorAll('.navmenu a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (navMenu.classList.contains('active')) {
+          navMenu.classList.remove('active');
+          mobileNavToggle.classList.add('bi-list');
+          mobileNavToggle.classList.remove('bi-x');
+        }
+      });
+    });
+
+    // Scroll Top Button
+    const scrollTop = document.querySelector('.scroll-top');
+    
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        scrollTop.classList.add('active');
+      } else {
+        scrollTop.classList.remove('active');
+      }
+    });
+
+    scrollTop.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+
+    // Smooth Scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          const headerHeight = document.querySelector('.header').offsetHeight;
+          const targetPosition = target.offsetTop - headerHeight;
+          
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+    // Active nav link on scroll
+    const sections = document.querySelectorAll('section[id]');
+    
+    window.addEventListener('scroll', () => {
+      const scrollY = window.pageYOffset;
+      
+      sections.forEach(current => {
+        const sectionHeight = current.offsetHeight;
+        const sectionTop = current.offsetTop - 100;
+        const sectionId = current.getAttribute('id');
+        
+        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+          document.querySelectorAll('.navmenu a').forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `#${sectionId}`) {
+              link.classList.add('active');
+            }
+          });
+        }
+      });
+    });
+
+    // Form submission handler
+    function handleSubmit(e) {
+      e.preventDefault();
+      
+      const form = e.target;
+      const successMsg = form.querySelector('.success-message');
+      const errorMsg = form.querySelector('.error-message');
+      
+      // Hide previous messages
+      successMsg.style.display = 'none';
+      errorMsg.style.display = 'none';
+      
+      // Get form data
+      const formData = {
+        name: form.querySelector('#name-field').value,
+        email: form.querySelector('#email-field').value,
+        phone: form.querySelector('#phone-field').value
+      };
+      
+      // Validate
+      if (!formData.name || !formData.email || !formData.phone) {
+        errorMsg.style.display = 'block';
+        return;
+      }
+      
+      // Show success message
+      successMsg.style.display = 'block';
+      
+      // Reset form
+      form.reset();
+      
+      // Hide success message after 5 seconds
+      setTimeout(() => {
+        successMsg.style.display = 'none';
+      }, 5000);
+      
+      console.log('Form submitted:', formData);
+    }
+  </script>
+
+</body>
+
+</html>
